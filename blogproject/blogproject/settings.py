@@ -25,7 +25,7 @@ SECRET_KEY = 'i^)$mo8_co(%!8q3=74m5&i_v8j7f@*wv@(wh_19&r=dpr9wm='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','139.196.111.99']
 
 
 # Application definition
@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
-    'comments'
+    'blog.apps.BlogConfig',
+    'comments.apps.CommentsConfig',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +126,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
